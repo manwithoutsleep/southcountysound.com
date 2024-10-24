@@ -24,4 +24,11 @@ describe('DreamListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render title', () => {
+      const fixture = TestBed.createComponent(DreamListComponent);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      expect(compiled.querySelector('h1')?.textContent).toContain('Dreams in the South County Sound');
+  });
 });

@@ -17,6 +17,6 @@ describe('AppComponent', () => {
   it(`should have the 'southcountysound.com' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('southcountysound.com');
+    expect(app.title).toEqual('South County Sound');
   });
 });

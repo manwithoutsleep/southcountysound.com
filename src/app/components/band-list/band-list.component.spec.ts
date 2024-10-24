@@ -24,4 +24,11 @@ describe('BandListComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+
+    it('should render title', () => {
+        const fixture = TestBed.createComponent(BandListComponent);
+        fixture.detectChanges();
+        const compiled = fixture.nativeElement as HTMLElement;
+        expect(compiled.querySelector('h1')?.textContent).toContain('South County Sound Bands');
+    });
 });

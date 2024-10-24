@@ -19,4 +19,11 @@ describe('PageNotFoundComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
+
+    it('should render title', () => {
+        const fixture = TestBed.createComponent(PageNotFoundComponent);
+        fixture.detectChanges();
+        const compiled = fixture.nativeElement as HTMLElement;
+        expect(compiled.querySelector('h1')?.textContent).toContain('Page Not Found');
+    });
 });

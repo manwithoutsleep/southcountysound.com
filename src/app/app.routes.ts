@@ -1,12 +1,17 @@
 import { Routes } from '@angular/router';
-import { BandComponent } from './band/band.component';
-import { HomeComponent } from './home/home.component';
-import { BandListComponent } from './band-list/band-list.component';
-import { DreamListComponent } from './dream-list/dream-list.component';
+import { BandComponent } from './components/band/band.component';
+import { HomeComponent } from './components/home/home.component';
+import { BandListComponent } from './components/band-list/band-list.component';
+import { DreamListComponent } from './components/dream-list/dream-list.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
-    {path: 'home', component: HomeComponent},
-    {path: 'band-list', component: BandListComponent},
-    {path: 'band', component: BandComponent},
-    {path: 'dream-list', component: DreamListComponent},
+    {path: 'band-list', component: BandListComponent, title: 'Bands'},
+    {path: 'band', component: BandComponent, title: 'Band'},
+    {path: 'dream-list', component: DreamListComponent, title: 'Dreams in the South County Sound'},
+    {path: 'home', redirectTo: '', pathMatch: 'full'},
+    {path: '', component: HomeComponent, title: ''},
+    {path: '**', component: PageNotFoundComponent, title: 'South County Not Found'}
 ];
+
+
